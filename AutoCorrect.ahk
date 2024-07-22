@@ -204,6 +204,7 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ;------------------------------------------------------------------------------
 ; Word beginnings
 ;------------------------------------------------------------------------------
+:*:لحظخ::لحظه
 :*:abondon::abandon
 :*:abreviat::abbreviat
 :*:accomadat::accommodat
@@ -3426,6 +3427,8 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::pased::passed
 ::pasengers::passengers
 ::passerbys::passersby
+::mir::mirmostafa
+::1512::melika@22841793
 ::pasttime::pastime
 ::pastural::pastoral
 ::pattented::patented
@@ -5288,8 +5291,53 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::october::October
 ::november::November
 ::december::December
-
+::tyep::type
 
 ;-------------------------------------------------------------------------------
 ; Anything below this point was added to the script by the user via the Win+H hotkey.
 ;-------------------------------------------------------------------------------
+::میر::میرمصطفی
+::سمم::سید محمد میرمصطفی
+::مم:: محمد میرمصطفی
+::هج::هادی جان
+::اب::ابراهیم
+;::مه::مهدیه
+::مه::مهدی
+::ری::ریحانه
+::اج::ابراهیم جان
+;::مج::مهدیه جان
+::مج::مهدی جان
+::رج::ریحانه جان
+;::سج::سعید جان
+::مع::مهدی عامری
+::وقب::وقت بخیر
+::وشب::وقت شما بخیر
+::وشهب::وقت شما هم بخیر
+::مت::متشکرم
+::مم::ممنونم
+::سل::سلام
+::ذح::BPMS
+::منا::منابع انسانی
+::اسپ::اسپرینت
+::اسج::اسپرینت جاری
+::رس::Resolved
+::زم::Closed
+::حقث::PreRelease
+::نا::نرم‌افزار
+::اکروز::امروز
+::امیرحسن::امیرحسین
+::اح::امیرحسین
+::احج::امیرحسین جان
+
+::شه::شهرزاد
+::شج::شهرزاد جان
+::سج::سپهرجان
+::فج::فائقه جان
+
+::Vlaue::Value
+::TVlaue::TValue
+
+::جدوال::جداول
+
+::asbtract::abstract
+::Techical::Technical

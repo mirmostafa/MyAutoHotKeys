@@ -1,5 +1,5 @@
 ﻿#NoEnv ; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn  ; Enable warnings to assist with detecting common errors.
+#Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 
@@ -8,7 +8,7 @@ StringReplace, OutputVar, OutputVar, "
 SplitPath, OutputVar, , OutDir, , OutNameNoExt, OutDrive
 
 ; Am I active?
-^#a:: MsgBox, , Mohammad Mirmostafa HotKey Manager, Hi. I'm active, 5
+; ^#a:: MsgBox, , Mohammad Mirmostafa HotKey Manager, Hi. I'm active, 5
 
 ; Custom Multimedia buttons
 ^#NumpadAdd:: Send {Volume_Up} ;ctrl+shift + numpad plus
@@ -18,8 +18,17 @@ SplitPath, OutputVar, , OutDir, , OutNameNoExt, OutDrive
 ^#Numpad8:: Send {Media_Play_Pause}
 ^#Numpad9:: Send {Media_Next}
 
+; Toogle AlwaysOnTop on Active Window
+^#a:: Winset, AlwaysOnTop, Toggle, A
+
 ; New Keep note 📝
-^#n:: Run, chrome.exe, keep.new
+^#n:: Run chrome.exe "https://keep.google.com/"
+;Run, chrome.exe, keep.new
+
+; Open URLs
+^#j:: Run chrome.exe "http://192.168.88.76:8080/secure/Dashboard.jspa"
+^#l:: Run chrome.exe "http://192.168.88.130/"
+
 ; Google highlighted text
 ^#g::
     {
@@ -56,16 +65,16 @@ SplitPath, OutputVar, , OutDir, , OutNameNoExt, OutDrive
             IfInString, searchQuery, .
             {
                 IfInString, searchQuery, +
-                Run, http://www.google.com/search?q=%searchQuery%
+                    Run, http://www.google.com/search?q=%searchQuery%
                 else
                     Run, %searchQuery%
             }else
-                Run, http://www.google.com/search?q=%searchQuery%
+            Run, http://www.google.com/search?q=%searchQuery%
+            return
+        }
+        clipboard = %prevClipboard%
         return
     }
-    clipboard = %prevClipboard%
-    return
-}
 
 ; Translate highlighted text
 ^#t::
@@ -103,13 +112,18 @@ SplitPath, OutputVar, , OutDir, , OutNameNoExt, OutDrive
             IfInString, searchQuery, .
             {
                 IfInString, searchQuery, +
-                Run, https://translate.google.com/?sl=auto&tl=fa&text=%searchQuery%&op=translate
+                    Run, https://translate.google.com/?sl=auto&tl=fa&text=%searchQuery%&op=translate
                 else
                     Run, %searchQuery%
             }else
-                Run, https://translate.google.com/?sl=auto&tl=fa&text=%searchQuery%&op=translate
+            Run, https://translate.google.com/?sl=auto&tl=fa&text=%searchQuery%&op=translate
+            return
+        }
+        clipboard = %prevClipboard%
         return
     }
-    clipboard = %prevClipboard%
-    return
-}
+
+#right::
+FormatTime, time, A_now, ddd d-MMM-yy HH:mm
+send %time%
+return
